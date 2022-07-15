@@ -10,6 +10,7 @@ const Home = () => {
   //use useQuery hook to make query request
   const { loading, data } = useQuery(QUERY_THOUGHTS);
   const { data: userData } = useQuery(QUERY_ME_BASIC);
+  console.log(userData)
   const thoughts = data?.thoughts || [];
 
   const loggedIn = Auth.loggedIn();

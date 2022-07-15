@@ -14,7 +14,7 @@ module.exports = {
         //separate "Bearer" from "<tokenvalue>"
         if (req.headers.authorization) {
             token = token
-            .split('')
+            .split(' ')
             .pop()
             .trim();
         }
@@ -24,12 +24,24 @@ module.exports = {
         }
         try {
             //decode and attach user data to request object
-            const { data } = jwt.verify(token, secret, { maxAge: expiration });
-            req.user = data;
-        }   catch {
-            console.log('Invalid token');
+            const { data } = jwt.verify(
+                token,
+                secret,
+                { maxAge: expiration },
+                (err, decoded) => {
+                  if (err) {
+                    console.log(err)
+                  }
+        
+                  req.user = decoded.data
+                }
+              )
+            } catch {
+              // const { data } = jwt.verify(token, secret)
+              console.log('Invalid token')
+            }
+        
+            // return updated request object
+            return req
+          },
         }
-        //return updated request object
-        return req;
-    }
-}
