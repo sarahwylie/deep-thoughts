@@ -14,7 +14,7 @@ Have you ever lay in bed wondering what the universe really holds beyond what ou
 Social media site to engage your brain, fingers, and those spare mushrooms in your closet!
 
 ## Installation
-Pop open ![the site](), set up an account, and post all your deepest thoughts!
+Pop open [Site is down, so please enjoy this!](https://www.instagram.com/moolovesdonuts/), set up an account, and post all your deepest thoughts!
 
 ## Output:
 ![Deep-Thoughts](https://user-images.githubusercontent.com/90208612/179305023-5e600b33-f48c-4f56-9f2b-2e7603ee7c7c.png)
